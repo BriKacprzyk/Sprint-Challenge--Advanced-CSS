@@ -1,7 +1,6 @@
 // Home Content
 
 .home {
-
   .intro {
 
     h2 {
@@ -11,9 +10,7 @@
     p {
       padding:0 15px;
     }
-  
   }
-
   .space-images {
     display: flex;
     flex-wrap: wrap;
@@ -26,7 +23,6 @@
       height: 100%;
     }
   }
-
   .visit-planets {
     padding: 15px;
 
@@ -38,14 +34,15 @@
       margin-top: 13px;
     }
   }
-
   .walk {
     margin-top: 60px;
     border-top: 1px solid @main-border-color;
     padding: 50px 60px;
     display: flex;
     justify-content: center;
-
+    .walkMobile{
+      display: none;
+    }
     .walk-text {
       width: 50%;
 
@@ -58,6 +55,17 @@
       }
 
       .btn {
+        width: 25%;
+        font-size: 1.7rem;
+        padding: 10px ;
+        text-align: center; 
+        border-radius: 10px;
+        .button(white, @ebony-clay);
+        text-decoration: none;
+
+        &:hover{
+          .button(#f2f2f2,#3b4563);
+        }
       }
     }
 
@@ -71,5 +79,87 @@
         border-radius: 10px;
       }
     }
+  }
+  .containerC{
+        border-radius: 5px;
+        background-color: #1b355e;
+        color: #1b355e;
+        padding: 20px;
+        margin: 30px 100px;
+        #contact{
+          font-size: 3rem;
+          text-align: center;
+          color: white;
+      }
+      input[type=text], select, textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+          font-size: 2.5rem;
+          background-color: #d9d9d9;
+      }
+      input[type=submit] {
+          background-color: dodgerblue;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 2.5rem;
+      }
+      input[type=submit]:hover {
+          background-color: black; 
+      }
+    }
+ @media @phone{
+  .header{
+    width: 100%;
+  }
+    .space-images{
+      .sky {
+        display: none;
+      }
+      .launch{
+        display: none;
+      }
+      .blast{
+        width: 100%;
+      }
+    }
+    
+    .walk{
+      flex-wrap: wrap;
+      margin: 0px;
+      padding: 0px;
+      .walkMobile{
+        display: block;
+        width: 95%;
+        height: auto;
+        border-radius: 10px;
+        margin-top: 20px;
+      }
+      .walk-text{
+        margin: 20px;
+        width: 100%;
+        margin-bottom: 50px;
+
+        .btn {
+          padding: 30px 40%;
+        }
+      }
+      .walk-img{
+        display: none;
+      }
+    }
+    .containerC{
+        width: 100%;
+        margin: 20px auto;
+        font-size: 1.5rem;
+      }
   }
 }// home
