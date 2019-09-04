@@ -1,1 +1,14 @@
 // Mixins Here
+.flexbox(@justify){
+	display: flex;
+	justify-content: @justify;
+}
+.navitem{
+	color: @nav-font;
+	font-size: 1.5rem;
+	text-decoration: none;
+}
+.button(@color, @bgc){
+	color: @color;
+	background-color: @bgc;
+}
